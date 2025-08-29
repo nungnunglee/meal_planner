@@ -1,0 +1,44 @@
+[project]
+name = "meal-planner"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "bcrypt>=4.3.0",
+    "fastapi>=0.116.1",
+    "huggingface-hub>=0.34.4",
+    "langchain>=0.3.27",
+    "langchain-google-genai>=2.1.9",
+    "langchain-huggingface>=0.3.1",
+    "langchain-ollama>=0.3.7",
+    "langchain-qdrant>=0.2.0",
+    "langgraph>=0.6.6",
+    "matplotlib>=3.10.5",
+    "mysql-connector-python>=9.4.0",
+    "pandas>=2.3.2",
+    "pydantic>=2.11.7",
+    "pymupdf>=1.26.3",
+    "pymysql>=1.1.1",
+    "python-dotenv>=1.1.1",
+    "python-jose[cryptography]>=3.5.0",
+    "python-multipart>=0.0.20",
+    "selenium>=4.35.0",
+    "sqlalchemy>=2.0.43",
+    "torch>=2.8.0",
+    "transformers>=4.55.4",
+    "uvicorn[standard]>=0.35.0",
+]
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cu128", marker = "sys_platform != 'linux'" },
+]
+torchvision = [
+  { index = "pytorch-cu128", marker = "sys_platform != 'linux'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
